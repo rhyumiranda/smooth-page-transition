@@ -3,7 +3,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import fragment from "./shaders/fragment.glsl";
 import vertex from "./shaders/vertex.glsl";
 import testTexture from './Man.jpeg';
-console.log(testTexture);
 
 export default class Sketch {
   constructor(options) {
@@ -51,6 +50,7 @@ export default class Sketch {
 
   addObjects() {
     this.geometry = new THREE.PlaneGeometry(0.5, 0.5, 100, 100);
+    this.geometry = new THREE.SphereGeometry(0.5, 160, 160);
     this.material = new THREE.ShaderMaterial({
       wireframe: false,
       uniforms: {
